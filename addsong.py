@@ -12,10 +12,32 @@ os.environ["SPOTIPY_REDIRECT_URI"] = "http://google.com"
 scope = "playlist-modify-public playlist-modify-private"
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
+'''
+from flask_api import status
 
-def main():
+@app.route('/your-api/')
+def empty_view(self):
+    content = {'your content here'}
+    return content, status.HTTP_201_CREATED
+'''
+'''
+client.get("http://www.google.com", params, new TextHttpResponseHandler() {
+        @Override
+        public void onSuccess(int statusCode, Header[] headers, String res) {
+            // called when response HTTP status is "200 OK"
+        }
+
+        @Override
+        public void onFailure(int statusCode, Header[] headers, String res, Throwable t) {
+            // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+        }	
+    }
+);
+'''
+def main(name):
+    artistURI = querySearch(name)
     # searching for all albums of specific artist
-    result = sp.artist_albums("2qk9voo8llSGYcZ6xrBzKx")
+    result = sp.artist_albums(artistURI)
     # list of all albums by this artist
     albumList = list(result.values())[1]
     # most recent album of artist
@@ -35,7 +57,20 @@ def main():
 
         trackList = getTrackUri(albumURI)
         sp.playlist_add_items("7L0FjSTBnzKsVHiLTXrVbW", trackList)
-        print()
+    x = "hello world"
+    return x
+
+
+def querySearch(artistName):
+    # query search for artist
+    searchQuery = sp.search(q=artistName, type="artist")
+    p = list(searchQuery.values())[0]
+    uri = list(p.values())[1]
+    searchResult = uri[0]
+    artistURI = list(searchResult.values())[9]
+    artistURI = artistURI[15:]
+
+    return artistURI
 
 
 def getTrackUri(albumURI):
