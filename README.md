@@ -13,5 +13,7 @@ This app is designed using flutter, dart, firebase firestore, and python.  Flutt
 
 The app
 
-\![Screenshot_1662336150](https://user-images.githubusercontent.com/52471959/188339851-bd974c79-d75a-464d-8a6d-54f2f041f3f4.png)
+The app begins with a basic login section upon openning the application. 
+![login_page](https://user-images.githubusercontent.com/52471959/188341120-1261dee7-0403-43ce-a274-10c246e4017d.png) 
+
 
