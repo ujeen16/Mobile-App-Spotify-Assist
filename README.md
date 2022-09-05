@@ -1,5 +1,5 @@
 # Mobile-App-Spotify-Assist
-What is it
+## What is it
 
 The idea behind the app is simple.  I like to listen to my favorite artists on Spotify
 but am very busy and sometimes don't notice a new upload for some time.  This app allows a user to create an account and login.  Once logged in a user may update
@@ -7,11 +7,11 @@ a list which scrolls down the screen of the artist which they want to keep up to
 added to an album in the users account.
 
 
-How it works
+## How it works
 
 This app is designed using flutter, dart, firebase firestore, and python.  Flutter, Dart, and Firebase are utilized for the account creation and frontend appearance.  Python is utilized for the script which updates the user song preferences.
 
-The app
+## The app
 
 The app begins with a basic login section upon openning the application.  If you have not created an account or enter an invalid
 email the appropriate error message will be displayed.
@@ -33,4 +33,4 @@ Once successfully logged in with a created account the user has the ability to v
 By utilizing the settings button the user is able to input their artists of interest.  The list is updated after every update event.
 
 ![empty_app](https://user-images.githubusercontent.com/52471959/188341572-69d44f5e-e32e-428b-a12c-dbcb24498bda.png)
-![updating artists](https://user-images.githubusercontent.com/52471959/188341635-4c9281a6-f2b5-40f8-bafa-939b3c05ab6c.png)
+![updating artists](https://user-images.githubusercontent.com/52471959/188355860-6acafbc6-cf71-4f39-921a-521dfc516e69.png)
