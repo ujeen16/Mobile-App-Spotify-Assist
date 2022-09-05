@@ -13,7 +13,24 @@ This app is designed using flutter, dart, firebase firestore, and python.  Flutt
 
 The app
 
-The app begins with a basic login section upon openning the application. 
+The app begins with a basic login section upon openning the application.  If you have not created an account or enter an invalid
+email the appropriate error message will be displayed.
+
 ![login_page](https://user-images.githubusercontent.com/52471959/188341120-1261dee7-0403-43ce-a274-10c246e4017d.png) 
+![failed_login](https://user-images.githubusercontent.com/52471959/188341345-ad1ea238-4ced-4278-83fc-60f9b1997be4.png)
 
+When clicking the registration button the screen is changed to the registration page.  This page also will report invalid inputs
+and display appropriate responses.
 
+![failed_account_creation](https://user-images.githubusercontent.com/52471959/188341434-e0bcf5e4-e1ae-4cfd-8421-58e5b8385e00.png)
+![account_creation](https://user-images.githubusercontent.com/52471959/188341482-af67e9e7-fc16-47b2-955c-c9fe2433ec96.png)
+
+When loading any page the wait time is displayed with a loading icon.
+
+![loading_screen](https://user-images.githubusercontent.com/52471959/188341322-eb55fcd3-1362-47a9-89da-6706656d9566.png)
+
+Once successfully logged in with a created account the user has the ability to view their current artists which is initially empty.  
+By utilizing the settings button the user is able to input their artists of interest.  The list is updated after every update event.
+
+![empty_app](https://user-images.githubusercontent.com/52471959/188341572-69d44f5e-e32e-428b-a12c-dbcb24498bda.png)
+![updating artists](https://user-images.githubusercontent.com/52471959/188341635-4c9281a6-f2b5-40f8-bafa-939b3c05ab6c.png)
